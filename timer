@@ -8,17 +8,28 @@ hundredths = 0
 minutes = 0
 hours = 0
 days = 0
+weeks = 0
 
 try:
     while True:
         print(c.clear + c.cyan + '[Control-C to quit]: ' + c.reset)
-        print(seconds)
-        print(hundredths)
-        print(hours)
+        print(c.red + "weeks" + c.reset)
+        print(weeks)
+        print(c.red + "days" + c.reset)
         print(days)
+        print(c.red + "hours" + c.reset)
+        print(hours)
+        print(c.red + "minutes" + c.reset)
         print(minutes)
+        print(c.red + "seconds" + c.reset)
+        print(seconds)
+        print(c.red + "hundredths" + c.reset)
+        print(hundredths)
+
+
+
         time.sleep(0.01)
-        hundredth += 1
+        hundredths += 1
         if hundredths == 100:
             seconds += 1
             hundredths = 0
@@ -31,10 +42,11 @@ try:
         if hours == 24:
             days += 1
             hours = 0
+        if days == 7:
+            weeks += 1
+            days = 0
 
-
-
-except:
+except KeyboardInterrupt:
     print("\b\bByeLooser" + c.reset)
     exit()
 
