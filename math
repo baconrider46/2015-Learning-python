@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import colors as c
+B = c.base3
+R = c.reset
+Y = c.yellow
+
+print(c.clear + c.red + '''
+whats your number.
+''' + c.reset)
+
+number = input('Number? ')
+print('Ok, here you go ' + number + ' use them well.')
+
+
+
+for count in range(12,0,-1):
+    print(B + str(count) + R + ' x ' + number, end=' = ' + B)
+    print(int(number) * count)   
+
+
+
+
+
+
+
+
