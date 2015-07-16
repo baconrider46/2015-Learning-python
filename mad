@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+
+print(c.clear)
+
+text = '''Zombies
+
+Your being invaded by zombies and are holding up in a {building or shack}.
+Suddenly, a zombie bursts through the window you kill it by {action1}
+it but it just makes them angry, they all break through the window and
+{action2} towards you ,but you slap them all away with a {object1}.
+
+'''
+
+
+title = text.splitlines()[0]
+
+words = {
+    "building or shack": None,
+    "action1": None,
+    "action2": None,
+    "object1": None
+}
+
+answers = {}
+for key in words:
+    answer = ask("Enter " + key)
+    answers[key] = answer
+
+print(text.format(**answers))
+
+
+
+

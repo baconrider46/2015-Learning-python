@@ -4,7 +4,7 @@ import colors as c
 
 def ask(question,color=c.magenta):
     print(color + question + c.reset)
-    answer = input("> " + c.base3).lower().strip()
+    answer = input('> '+ c.base3).strip().lower()
     print(c.reset)
     return answer
 
@@ -13,5 +13,11 @@ if __name__ == '__main__':
     color = ask("what is your name in color" ,c.random_color())
     name = ask("Whats your name young one")
     
+
+
+
+
+
+
 
 
