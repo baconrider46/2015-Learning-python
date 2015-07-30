@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear)
+print(c.random_color() + "Do you like waffles?")
+waffles = input('> ')
+if waffles == 'yes':
+    print(c.random_color() + "Do you like pancakes?")
+    pancakes = input('> ')
+    if waffles == 'yes':
+        print(c.random_color() + "Do you like frenchtoast?")
+        frenchtoast = input('> ')
+        if frenchtoast == 'yes':
+            print("cant wait to get a mouth full!!")
+          
+        else:
+            print("You make me sad.")
+            exit()
+    
+    else:
+        print("You make me sad.")
+        exit()
+
+else:
+    print("You make me sad.")
+    exit()
+
