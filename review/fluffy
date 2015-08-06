@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+import random
+import time
+import time as t
+
+print(c.clear)
+
+for verse in range(5):
+    print(c.magenta + "pink fluffy unicorns dancing on rainbows")
+    t.sleep(3.0)
+
+print(c.red + "Lets test your knowledge and see what you've learned.")
+
+def q1():
+    answer = ask(c.magenta + "what color are the unicorns")
+    if answer == 'pink':
+        print(c.green + "exellent!")    
+        return True
+
+    return False == print(c.red + "failure is not acceptable!")
+
+def q2():
+    answer = ask(c.magenta + "Where  are they dancing?")
+    if answer.startswith("rainbow"):
+        return True == print(c.green + "good job")
+    return False == print(c.red + "wrong.")
+
+def q3():
+    answer = ask("please use one word to describe the texture of there fur:" +c.reset)
+    if answer.startswith("smile"):
+        return True == print(c.green + "Yay!")
+
+    return False == print(c.red + "inncorect.")
+
+questions = [q1,q2,q3]
+
+while questions:
+    question = random.choice(questions)
+    answer = question()
+    if answer:
+        questions.remove(question)
+
